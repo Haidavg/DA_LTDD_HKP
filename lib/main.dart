@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:purchee_official/giohang_test.dart';
+import 'package:purchee_official/main2.dart';
 import 'dangky.dart';
+import 'homepage2.dart';
 import 'login.dart';
 import 'main.dart';
 import 'doiMK.dart';
@@ -24,7 +26,7 @@ class Start extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Welcome to Baarland Coffee',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
@@ -83,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const Login()));
+                                  builder: (context) => const Login2()));
                         },
                         child: const Padding(
                             padding: EdgeInsets.fromLTRB(10, 10, 10, 10),

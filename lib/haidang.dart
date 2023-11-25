@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:purchee_official/haidang2.dart';
 import 'package:purchee_official/infor.dart';
+import 'package:purchee_official/page4.dart';
 
 class HaiDang extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class _HaiDangState extends State<HaiDang> {
           onPressed: () {
             Navigator.of(context).popUntil((route) => route.isFirst);
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Infor()));
+                context, MaterialPageRoute(builder: (context) => Page4()));
           },
         ),
         actions: [

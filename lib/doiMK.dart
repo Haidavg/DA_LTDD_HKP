@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:purchee_official/giohang_test.dart';
 import 'package:purchee_official/login.dart';
 import 'package:purchee_official/menu.dart';
+import 'package:purchee_official/page4.dart';
 import 'main.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class DoiMK extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Baarland Coffee - Đổi mật khẩu',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
@@ -41,125 +42,135 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.of(context).popUntil((route) => route.isFirst);
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Infor()));
-          },
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Page4()));
+            },
+          ),
         ),
-      ),
-      body: Container(
-        padding: const EdgeInsets.all(20),
-        // margin:  EdgeInsets.all(10),
-        decoration: const BoxDecoration(color: Colors.white),
+        body: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.all(20),
+            // margin:  EdgeInsets.all(10),
+            decoration: const BoxDecoration(color: Colors.white),
 
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              padding: const EdgeInsets.all(10),
-              // decoration: BoxDecoration(
-              //   border: Border.all(width: 1, color: Colors.white),
-              // ),
-              child: Column(children: [
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
                 Container(
-                  padding: const EdgeInsets.only(bottom: 20.0),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('images/avt.png'),
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(
-                      top: 5, bottom: 30, right: 5, left: 5),
-                  child: const Text(
-                    "Đổi mật khẩu",
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black),
-                  ),
-                ),
-                Container(
-                  color: Colors.white,
-                  margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
-                  child: TextField(
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.grey[200],
-                        labelText: "Mật khẩu cũ",
-                        labelStyle: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
-                        hintText: 'Nhập mật khẩu cũ',
-                        hintStyle: TextStyle(
-                            color: Colors.grey, fontWeight: FontWeight.bold)),
-                  ),
-                ),
-                Container(
-                  color: Colors.white,
-                  margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
-                  child: TextField(
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.grey[200],
-                        labelText: "Mật khẩu mới",
-                        labelStyle: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
-                        hintText: 'Nhập mật khẩu mới',
-                        hintStyle: TextStyle(
-                            color: Colors.grey, fontWeight: FontWeight.bold)),
-                  ),
-                ),
-                Container(
-                  color: Colors.white,
-                  margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
-                  child: TextField(
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.grey[200],
-                        labelText: "Xác nhận mật khẩu mới",
-                        labelStyle: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
-                        hintText: 'Xác nhận mật khẩu',
-                        hintStyle: TextStyle(
-                            color: Colors.grey, fontWeight: FontWeight.bold)),
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.fromLTRB(0, 30, 0, 2),
-                  child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red,
-                        minimumSize: const Size.fromHeight(50),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
+                  padding: const EdgeInsets.all(10),
+                  // decoration: BoxDecoration(
+                  //   border: Border.all(width: 1, color: Colors.white),
+                  // ),
+                  child: Column(children: [
+                    Container(
+                      padding: const EdgeInsets.only(bottom: 20.0),
+                      child: CircleAvatar(
+                        radius: 50,
+                        backgroundImage: AssetImage('images/avt.png'),
                       ),
-                      onPressed: () {
-                        Navigator.of(context)
-                            .popUntil((route) => route.isFirst);
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => HaiDang()));
-                      },
-                      child: const Padding(
-                          padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                          child: Text('Đổi mật khẩu',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold)))),
-                ),
-              ]),
-            )
-          ],
-        ),
-      ),
-      // This trailing comma makes auto-formatting nicer for build methods.
-    );
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(
+                          top: 5, bottom: 30, right: 5, left: 5),
+                      child: const Text(
+                        "Đổi mật khẩu",
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                    ),
+                    Container(
+                      color: Colors.white,
+                      margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
+                      child: TextField(
+                        style: TextStyle(color: Colors.black),
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.grey[200],
+                            labelText: "Mật khẩu cũ",
+                            labelStyle: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                            hintText: 'Nhập mật khẩu cũ',
+                            hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    Container(
+                      color: Colors.white,
+                      margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
+                      child: TextField(
+                        style: TextStyle(color: Colors.black),
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.grey[200],
+                            labelText: "Mật khẩu mới",
+                            labelStyle: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                            hintText: 'Nhập mật khẩu mới',
+                            hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    Container(
+                      color: Colors.white,
+                      margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
+                      child: TextField(
+                        style: TextStyle(color: Colors.black),
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.grey[200],
+                            labelText: "Xác nhận mật khẩu mới",
+                            labelStyle: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                            hintText: 'Xác nhận mật khẩu',
+                            hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.bold)),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(0, 30, 0, 2),
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.red,
+                            minimumSize: const Size.fromHeight(50),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context)
+                                .popUntil((route) => route.isFirst);
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HaiDang()));
+                          },
+                          child: const Padding(
+                              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                              child: Text('Đổi mật khẩu',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold)))),
+                    ),
+                  ]),
+                )
+              ],
+            ),
+          ),
+        )
+        // This trailing comma makes auto-formatting nicer for build methods.
+        );
   }
 }

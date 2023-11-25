@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:purchee_official/doiMK.dart';
-import 'package:purchee_official/giohang_test.dart';
-import 'package:purchee_official/infor.dart';
-import 'package:purchee_official/menu.dart';
 import 'dangky.dart';
-import 'main.dart';
-import 'package:purchee_official/homepage.dart';
+import 'homepage2.dart';
+import 'main2.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+void main() {
+  runApp(const Login2());
+}
+
+class Login2 extends StatelessWidget {
+  const Login2({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Baarland Coffee - Đăng nhập',
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({
+    super.key,
+  });
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -36,8 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Container(
+      body: Container(
         padding: const EdgeInsets.all(20),
         // margin:  EdgeInsets.all(10),
         decoration: const BoxDecoration(color: Colors.white),
@@ -51,13 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
               //   border: Border.all(width: 1, color: Colors.white),
               // ),
               child: Column(children: [
-                Container(
-                  padding: const EdgeInsets.only(bottom: 20.0),
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('images/logo.png'),
-                  ),
-                ),
                 Container(
                   margin: const EdgeInsets.all(5),
                   child: const Text(
@@ -86,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Container(
                   color: Colors.white,
-                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 50),
                   child: TextField(
                     style: TextStyle(color: Colors.black),
                     decoration: InputDecoration(
@@ -98,25 +90,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         hintText: 'Password',
                         hintStyle: TextStyle(
                             color: Colors.grey, fontWeight: FontWeight.bold)),
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.fromLTRB(230, 0, 0, 20),
-                  child: Row(
-                    children: [
-                      TextButton(
-                          style: ButtonStyle(
-                            foregroundColor:
-                                MaterialStateProperty.all<Color>(Colors.red),
-                          ),
-                          onPressed: () {},
-                          child: const Text(
-                            'Quên mật khẩu?',
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontWeight: FontWeight.bold),
-                          )),
-                    ],
                   ),
                 ),
                 Column(children: [
@@ -131,14 +104,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       onPressed: () {
                         Navigator.of(context)
                             .popUntil((route) => route.isFirst);
-                        Navigator.of(context).pushAndRemoveUntil(
-                          MaterialPageRoute(
-                            builder: (context) => CarouselSliderExample(),
-                          ),
-                          (route) => false,
-                        );
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Test()));
+//                             Navigator.pushReplacement(
+//   context,
+//   MaterialPageRoute(builder: (context) => Test()),
+// );
+                        // Navigator.of(context).pushAndRemoveUntil(
+                        //         MaterialPageRoute(
+                        //           builder: (context) => MyHomePage(),
+                        //         ),
+                        //         (route) => false,
+                        //       );
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyHomePageChinh()));
                       },
                       child: const Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -200,6 +179,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-    ));
+    );
   }
 }

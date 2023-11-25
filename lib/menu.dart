@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:purchee_official/giohang.dart';
 import 'package:purchee_official/giohang_test.dart';
 import 'package:purchee_official/haidang.dart';
+import 'package:purchee_official/index.dart';
 import 'package:purchee_official/infor.dart';
 import 'package:purchee_official/thanhtoan.dart';
+import 'package:purchee_official/thanhtoan2.dart';
 import "homepage.dart";
 import 'package:purchee_official/haidang.dart';
 import 'package:purchee_official/haidang2.dart';
-
-//không phải chạy test này
+import 'DanhSachTra.dart';
+import 'chitietsanpham.dart';
 
 class Test extends StatefulWidget {
   @override
@@ -21,7 +23,7 @@ class _TestState extends State<Test> {
   final List<Widget> _pages = [
     HomeScreen(),
     CartBut(),
-    FavoritesScreen(),
+    DanhSachTra(),
     ProfileScreen(),
   ];
 
@@ -71,7 +73,7 @@ class _TestState extends State<Test> {
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CarouselSliderExample();
+    return TrangChu();
     //CarouselSliderExample();
   }
 }
@@ -79,7 +81,7 @@ class HomeScreen extends StatelessWidget {
 class CartBut extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GioHang();
+    return Text('Gio Hang');
 
     //const Gio_Hang();
   }
@@ -88,7 +90,7 @@ class CartBut extends StatelessWidget {
 class FavoritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ThanhToan();
+    return ThanhToanTong();
 
     //ThanhToan();
   }

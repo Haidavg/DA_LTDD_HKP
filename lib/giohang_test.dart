@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class GioHang extends StatelessWidget {
-  const GioHang({Key? key}) : super(key: key);
+class Gio_Hang_test extends StatelessWidget {
+  const Gio_Hang_test({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override

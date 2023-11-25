@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:purchee_official/giohang_test.dart';
 import 'package:purchee_official/infor.dart';
 import 'package:purchee_official/login.dart';
+import 'package:purchee_official/main2.dart';
 import 'package:purchee_official/menu.dart';
 import 'main.dart';
+import 'homepage2.dart';
 
 void main() {
   runApp(const Dangky());
@@ -16,7 +18,7 @@ class Dangky extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Baarland Coffee - Đăng ký',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
@@ -163,8 +165,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       onPressed: () {
                         Navigator.of(context)
                             .popUntil((route) => route.isFirst);
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Test()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyHomePageChinh()));
                       },
                       child: const Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -208,7 +212,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const Login()));
+                                                const Login2()));
                                   },
                                   child: const Text(
                                     'Đăng nhập',

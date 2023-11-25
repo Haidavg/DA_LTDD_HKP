@@ -1,42 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:purchee_official/doiMK.dart';
-import 'package:purchee_official/login.dart';
-import 'package:purchee_official/main.dart';
-import 'package:purchee_official/haidang.dart';
-import 'package:purchee_official/haidang2.dart';
+import 'package:purchee_official/lichsudat.dart';
+import 'package:purchee_official/main2.dart';
+import 'package:purchee_official/page1.dart';
+import 'doiMK.dart';
+import 'haidang.dart';
 
-void main() {
-  runApp(const Infor());
-}
-
-class Infor extends StatelessWidget {
-  const Infor({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Baarland Coffee - Thông tin cá nhân',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+class Page4 extends StatefulWidget {
+  const Page4({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Page4> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<Page4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.of(context).popUntil((route) => route.isFirst);
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Page1()));
+          },
+        ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           child: Column(children: [
@@ -123,8 +114,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             MaterialStateProperty.all<Color>(Colors.black),
                       ),
                       onPressed: () {
-                        Navigator.of(context)
-                            .popUntil((route) => route.isFirst);
+                        // Navigator.of(context)
+                        //     .popUntil((route) => route.isFirst);
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -164,7 +155,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         foregroundColor:
                             MaterialStateProperty.all<Color>(Colors.black),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context)
+                            .popUntil((route) => route.isFirst);
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => LichSu()));
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -208,7 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const Start()));
+                                  builder: (context) => const Login2()));
                         },
                         child: const Padding(
                             padding: EdgeInsets.fromLTRB(30, 10, 30, 10),

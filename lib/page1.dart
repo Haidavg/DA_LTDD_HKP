@@ -1,41 +1,17 @@
-import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: CarouselSliderExample(),
-  ));
-}
+class Page1 extends StatefulWidget {
+  const Page1({super.key, });
 
-class CarouselSliderExample extends StatelessWidget {
-  const CarouselSliderExample({super.key});
+  
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Baarland Coffee - Trang chủ',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
+  State<Page1> createState() => _MyHomePageState();
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<Page1> {
   final List<String> imageUrls = [
     'images/anh1.jpg',
     'images/anh2.jpg',

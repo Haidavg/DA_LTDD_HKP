@@ -1,38 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:purchee_official/menu.dart';
-import 'package:purchee_official/thanhtoan.dart';
 
-void main() {
-  runApp(const Gio_Hang_3());
-}
+class Page2 extends StatefulWidget {
+  const Page2({Key? key, }) : super(key: key);
 
-class Gio_Hang_3 extends StatelessWidget {
-  const Gio_Hang_3({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+ 
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Page2> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<Page2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,8 +20,9 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               InkWell(
                 child: Icon(Icons.arrow_back_sharp),
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomeScreen())),
+                onTap: () {}
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => HomeScreen())),
               ),
               Container(
                 width: 100,
@@ -493,9 +471,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               onPressed: () {
-                Navigator.of(context).popUntil((route) => route.isFirst);
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => FavoritesScreen()));
+                // Navigator.of(context).popUntil((route) => route.isFirst);
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => FavoritesScreen()));
               },
               child: const Padding(
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 10),

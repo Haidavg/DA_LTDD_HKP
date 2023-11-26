@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:purchee_official/Phuongthucthanhtoan.dart';
+import 'package:purchee_official/Uudai.dart';
 import 'package:purchee_official/lichsudat.dart';
+import 'package:purchee_official/lichsumuahang.dart';
 import 'package:purchee_official/main2.dart';
 import 'package:purchee_official/page1.dart';
 import 'doiMK.dart';
@@ -171,6 +174,130 @@ class _MyHomePageState extends State<Page4> {
                                       const EdgeInsets.fromLTRB(0, 0, 10, 0)),
                               Text(
                                 'Quản lý đơn hàng',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                          Icon(Icons.arrow_forward_ios_rounded),
+                          Container(
+                            width: 100,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ]),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(children: [
+                    TextButton(
+                      style: ButtonStyle(
+                        foregroundColor:
+                            MaterialStateProperty.all<Color>(Colors.black),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context)
+                            .popUntil((route) => route.isFirst);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Lichsumuahang()));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 0, 10, 0)),
+                              Text(
+                                'Lịch sử mua hàng',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                          Icon(Icons.arrow_forward_ios_rounded),
+                          Container(
+                            width: 100,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ]),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(children: [
+                    TextButton(
+                      style: ButtonStyle(
+                        foregroundColor:
+                            MaterialStateProperty.all<Color>(Colors.black),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context)
+                            .popUntil((route) => route.isFirst);
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Uudai()));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 0, 10, 0)),
+                              Text(
+                                'Ưu đãi',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                          Icon(Icons.arrow_forward_ios_rounded),
+                          Container(
+                            width: 100,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ]),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(children: [
+                    TextButton(
+                      style: ButtonStyle(
+                        foregroundColor:
+                            MaterialStateProperty.all<Color>(Colors.black),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context)
+                            .popUntil((route) => route.isFirst);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Phuongthucthanhtoan()));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 0, 10, 0)),
+                              Text(
+                                'Phương thức thanh toán',
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 15,
